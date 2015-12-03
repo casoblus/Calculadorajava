@@ -9,9 +9,9 @@ class Calculadora
 		System.out.println( "La suma es: " + suma );
 	}
 	// Le pasamos dos parametros y devuelve el resultado
-	private static int RESTA() 
+	private static int RESTA( int S0, int S1 ) 
 	{
-		return 0;
+		return S0 - S1;
 	}
 	// Pedimos los datos en la función y retorna el resultado
 	private static int MULTI() 
@@ -60,6 +60,15 @@ class Calculadora
 					SUMA( n1, n2 );	
 					break;
 				case 2:
+					// Pido los datos para enviarselos a la funcion
+					System.out.println( "Minuendo:" );
+					n1 = sc.nextInt();
+					System.out.println( "Sustraendo:" );
+					n2 = sc.nextInt();
+					// Llamo a la funcion pasandole los parametros
+					// y guardo el resultado en diferencia
+					int diferencia = RESTA( n1, n2 );
+					System.out.println( "La diferencia es: " + diferencia );
 					break;
 				case 3:
 					break;
