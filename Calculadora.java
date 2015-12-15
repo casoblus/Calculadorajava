@@ -16,17 +16,39 @@ class Calculadora
 	// Pedimos los datos en la función y retorna el resultado
 	private static int MULTI() 
 	{	
-		return 0;
+		Scanner sc = new Scanner( System.in );
+
+		System.out.println( "Primer factor" );
+		int S0 = sc.nextInt();
+		System.out.println( "Segundo factor" );
+		int S1 = sc.nextInt();
+
+		int producto = S0 * S1;
+		return producto;
 	}
 	// Pedimos los datos en la funcion y visualiza el resultado
 	private static void DIVI() 
 	{	
-		System.out.print( 0 );
+		Scanner sc = new Scanner( System.in );
+
+		System.out.println( "Dividendo: " );
+		int S0 = sc.nextInt();
+		System.out.println( "Divisor: " );
+		int S1 = sc.nextInt();
+
+		float cociente = S0 / S1;
+			
+		System.out.print( "El cociente es: " + cociente );
 	}
 	// Pedimos los datos en la funcion y retorna el resultado
 	private static int CAMBIO_S() 
 	{	
-		return 0;
+		Scanner sc = new Scanner( System.in );
+
+		System.out.println( "Introducir numero entero para cambiar de signo: " );
+		int num = sc.nextInt();
+
+		return -1 * num;
 	}
 	// Creamos un menu con las distintas opciones mas una para salir
 	// Elegir una opcion distinta genera ERROR.
@@ -52,9 +74,9 @@ class Calculadora
 			{
 				case 1:
 					// Pido los datos para enviarselos a la funcion
-					System.out.println( "Primer nando:" );
+					System.out.println( "Primer sumando:" );
 					n1 = sc.nextInt();
-					System.out.println( "Segundo nando:" );
+					System.out.println( "Segundo sumando:" );
 					n2 = sc.nextInt();
 					// Llamo a la funcion pasandole los parametros
 					SUMA( n1, n2 );	
@@ -71,10 +93,14 @@ class Calculadora
 					System.out.println( "La diferencia es: " + diferencia );
 					break;
 				case 3:
+					System.out.println( "El producto es: " + MULTI() );
 					break;
 				case 4:
+					// llamada a la funcion para dividir
+					DIVI();
 					break;
 				case 5:
+					System.out.println( CAMBIO_S() );
 					break;
 				case 6:
 					break;
